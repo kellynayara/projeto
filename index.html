@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<link rel="shortcut icon" href="favicon.ico.jpeg" type="image/x-icon">
+<style>
+    @charset "UTF-8";
+
+    @font-face {
+        font-family: 'Android';
+        src: url('../fontes/idroid.otf') format(opentype);
+        font-weight: normal;
+    }
+
+
+    :root {
+        --cor0: #c5ebd3;
+        --cor1: #83e1ad;
+        --cor2: #3ddc84;
+        --cor3: #2fa866;
+        --cor4: #1a5c37;
+        --cor5: #063d1e;
+
+        --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+        --fonte-destaque: 'Bebas Neue', cursive;
+        --fonte-android: 'Android', cursive;
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        background-color: var(--cor0);
+        font-family: var(--fonte-padrao);
+    }
+
+    a.externo::after {
+        content: '\00A0\1F517';
+
+    }
+
+    header {
+        background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+        padding: 40px;
+        text-align: center;
+        min-height: 150px;
+        margin: auto;
+        padding: 1rem;
+        background: url("https://cdn.britannica.com/27/95027-050-C0B1A761/view-Machu-Picchu-Peru.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    header>h1 {
+        color: white;
+        font-family: var(--fonte-destaque);
+        margin-bottom: 20px;
+        font-size: 3em;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.603);
+    }
+
+    header>p {
+        color: white;
+        max-width: 500px;
+        margin: auto;
+        font-family: var(--fonte-padrao);
+        font-size: 1.2em;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.800);
+        background: var(--cor5);
+        padding: 14px;
+        border-radius: 40px;
+    }
+
+    nav {
+        background-color: var(--cor5);
+        padding: 10px;
+        color: white;
+        min-width: 300px;
+        margin: auto;
+        box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.607);
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        text-align: center;
+    }
+
+    nav>a {
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition-duration: 0.3s;
+        text-align: center;
+    }
+
+    nav>a:hover {
+        background-color: var(--cor0);
+        color: var(--cor5);
+    }
+
+    main {
+        background-color: white;
+        min-width: 300px;
+        max-width: 1000px;
+        margin: auto;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.569);
+        margin-bottom: 30px;
+    }
+
+    main img {
+        width: 100%;
+    }
+
+    main img.pequena {
+        width: 350px;
+        display: block;
+        margin: auto;
+    }
+
+    main h1 {
+        color: var(--cor5);
+        font-family: var(--fonte-android);
+
+    }
+
+    main h2 {
+        font-family: var(--fonte-android);
+    }
+
+    main p {
+        margin: 15px 0px;
+        text-align: justify;
+        text-indent: 30px;
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+
+    main strong {
+        color: var(--cor4);
+        font-weight: bold;
+    }
+
+    hr {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        color: var(--cor4);
+    }
+
+    aside {
+        background-color: var(--cor0);
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    div.video {
+        background-color: var(--cor5);
+        margin: 0px -20px 30px -20px;
+        padding: 20px;
+        padding-bottom: 57%;
+        position: relative;
+    }
+
+    div.video>iframe {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        height: 90%;
+    }
+
+    aside>h3 {
+        background-color: var(--cor3);
+        color: white;
+        padding: 10px;
+        margin: -10px -10px 0px -10px;
+        border-radius: 10px 10px 0px 0px;
+        text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.609);
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--cor4);
+    }
+
+    ol li,
+    ul li {
+        margin-left: 40px;
+
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+
+    ul li img {
+        margin: 10px 0;
+        width: 400px;
+        height: 300px;
+    }
+
+    .localizacao {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: var(--cor5);
+        margin: 0px -20px 30px -20px;
+    }
+
+    iframe {
+        border: none;
+    }
+
+    .botao {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    button {
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #1a5c37;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    button a {
+        color: white;
+    }
+    button {
+        background-color: rgb(43, 226, 104);
+        color: white;
+        border-radius: 8px;
+        padding: 8px;
+        font-weight: bolder;
+        border-color: aliceblue;
+        box-shadow: none;
+    }
+
+
+    footer {
+        background-color: var(--cor5);
+        color: white;
+        text-align: center;
+        font-size: 0.8em;
+        padding: 5px;
+    }
+
+    footer>a {
+        color: white;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        background-color: rgb(214, 251, 214);
+        color: var(--cor5);
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Machu Picchu e o Vale Sagrado dos Incas</h1>
+        <p>Descubra as maravilhas deste passeio, Machu Picchu e o <br> Vale Sagrado dos Incas</p>
+    </header>
+    <nav>
+        <a href="#">Início</a>
+        <a href="#viagem">A viagem</a>
+        <a href="#curiosidades">Curiosidades</a>
+        <a href="#contato">Fale conosco</a>
+        <button type="button" onclick="alert('Bem vindo!')">Click aqui!</button>
+
+    </nav>
+    <main>
+        <article id="viagem">
+            <h1>Meu sonho de viagem</h1>
+
+            <p>Destino perfeito para aventureiros e apaixonados por história e natureza, Machu Picchu proporciona
+                viagens
+                inesquecíveis para quem quer ter contato com a cultura Inca, em meio a templos, vales e o visual de tirar o fôlego
+                das montanhas
+                que ficam a cerca de dois metros acima do nível do mar. Aproveite para unir à viagem uma visita à
+                capital peruana Lima e
+                aos povoados
+                <strong><a href="https://pt.wikipedia.org/wiki/Ollantaytambo">Ollantaytambo</a>,<a href="https://machupicchubrasil.com.br/blog/aguas-calientes-proxima-machu-picchu/"> Águas Calientes</a>, <a href="https://www.viajarbarato.com.br/vale-sagrado-atracoes-o-que-fazer-passeios-melhores-atracoes-vale-sagrado-urubamba-peru-america-do-su-C1489.htm"> Urubamba</a>, <a href="https://www.ingressomachupicchu.com/ruinas-pisac-vale-sagrado-incas/"> Pisac</a> </strong> e <strong><a href="https://www.ingressomachupicchu.com/yucay/"> Yucay</a></strong> 
+            </p>
+
+
+            <p>Um dos passeios imperdíveis da região é o tour de trem que percorre rios e vales no entorno do sítio
+                arqueológico de
+                Machu Picchu, assim como a visita ao centro histórico de Cusco, no Peru, e aos restaurantes e ao mercado
+                de artesanato
+                da região do Valle Sagrado e Águas Calientes. Essas e muitas outras aventuras estão garantidas nos
+                pacotes de viagem para
+                Machu Picchu. Se preferir, compre passagens aéreas ou reserve seu hotel com a agência de turismo Meu
+                Sonho de Viagem.</p>
+
+            <picture>
+                <source media="(max-width: 670px)">
+                <img src="images/MachuPicchu1.png" alt="Machu Picchu">
+            </picture>
+
+            <p>Sem esquecer de reservar um tempo para conhecer o Vale Sagrado dos Incas: ruínas, sítios arqueológicos e
+                curiosidades.</p>
+
+            <p>O <strong>“turismo inca” </strong>é responsável por atrair milhares de visitantes ao Peru vindos dos
+                cantos mais distantes do mundo.
+                E para entender a história dessa civilização, é preciso ir além da cidade sagrada de Machu Picchu.</p>
+
+            <picture>
+                <source media="(max-width: 670px)">
+                <img src="images/MachuPicchu2.jpg" alt="Machu Picchu">
+            </picture>
+
+            <p>Foi no Vale Sagrado que o Império Inca se desenvolveu, muito em função das terras férteis que se
+                estendiam próximas
+                às montanhas e rios.</p>
+
+            <p>Rastros de suas presenças seguem preservados nas ruínas de templos e antigas cidades, formando ricos
+                sítios
+                arqueológicos como os de Pisac e Ollantaytambo.</p>
+
+            <p>Confira nossas dicas sobre o destino e veja também nossos ótimos <strong><a href="#">preços</a></strong>.
+                Boa viagem!</p>
+
+            <div class="video"><iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/Q_yxQFgkPEk?si=CKDlrcd_JuYYFDv9" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <hr> 
+
+            <h1 id="curiosidades">Curiosidades Machu Picchu!</h1>
+            <p><strong>8 curiosidades sobre Machu Picchu, a cidade perdida dos Incas!</strong></p>
+
+            <ol>
+                <li>
+                    <p>Ficou esquecida no tempo</p>
+                </li>
+                <li>
+                    <p>Teve seus tesouros explorados</p>
+                </li>
+                <li>
+                    <p>Protegida por estratégia de guerra</p>
+                </li>
+                <li>
+                    <p>Foi descoberta por acaso</p>
+                </li>
+                <li>
+                    <p>Tudo foi bem planejado</p>
+                </li>
+                <li>
+                    <p>Não é tudo uma coisa só </p>
+                </li>
+                <li>
+                    <p>Um refúgio para o imperador</p>
+                </li>
+                <li>
+                    <p>Um importante centro religios</p>
+                </li>
+            </ol>
+
+            <h2>Locais de interesse na região do Vale Sagrado dos Incas</h2>
+
+            <div class="container">
+                <ul>
+                    <li>
+                        <p>Ollantaytambo</p>
+                        <img src="images/Ollantaytambo.jpg" alt="Ollantaytambo">
+                    </li>
+                    <li>
+                        <p>Águas Calientes</p>
+                        <img src="images/ÁguasCalientes.jpg" alt="Águas Calientes">
+                    </li>
+                    <li>
+                        <p>Urubamba</p>
+                        <img src="images/Urubamba.jpg" alt="Urubamba">
+                    </li>
+                    <li>
+                        <p>Pisac</p>
+                        <img src="images/Pisac.jpg" alt="Pisac">
+                    </li>
+                    <li>
+                        <p>Yucay</p>
+                        <img src="images/Yucay.jpg" alt="Yucay">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="localizacao">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1lhq54Y-NwqscLtMvZd2NAFzTT_WCG27W&ehbc=2E312F"
+                    width="640" height="480"></iframe>
+            </div>
+
+            <h3 id="contato">Para mais informações, preencha o formulário através do botão abaixo:</h3>
+
+            <div class="botao">
+                <button>
+                    <a href="https://forms.gle/yaJ1hGofY86jEif5A">Acesse o formulário</a>
+                </button>
+            </div>
+        </article>
+
+
+    </main>
+    <footer>
+        Desenvolvido por <a href="#">KELLY NAYARA SHRÖDER DE SOUZA </a>
+    </footer>
+</body>
+
+</html>
